@@ -134,7 +134,7 @@ jobs:
         run: |
           python ./install.py ${{ needs.meta.outputs.tag }}
           if [ "${{ matrix.os_name }}" = "win" ]; then
-            jq --arg url "https://github.com/DarkLingYun/MaaGF2Exilium" --arg version "${{ needs.meta.outputs.tag }}" '. + {"url": $url, "version": $version}' ./assets/interface.json > ./install/interface.json
+            jq --arg url "https://github.com/LushShepherd/MaaGF2ExiliumGlobalPCDev.git" --arg version "${{ needs.meta.outputs.tag }}" '. + {"url": $url, "version": $version}' ./assets/interface.json > ./install/interface.json
           fi
           
       - uses: actions/upload-artifact@v4
